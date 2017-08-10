@@ -1,2 +1,3 @@
-# vimrc
+# cfg
 vimrc
+gitconfig
