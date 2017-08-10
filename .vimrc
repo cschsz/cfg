@@ -71,7 +71,7 @@ set visualbell
 set t_vb=
 
 " Enable use of the mouse for all modes.
-set mouse=a
+set mouse=v
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue".
