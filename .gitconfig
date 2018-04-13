@@ -1,6 +1,8 @@
 [user]
       email = c@sch-sz.de
       name = cschsz
+[core]
+      editor = vim
 [alias]
       br = branch
       cm = commit -m
