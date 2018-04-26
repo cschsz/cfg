@@ -8,6 +8,7 @@
       cm = commit -m
       cob = checkout -b
       go = checkout
+      cp = cherry-pick -e
       ll = log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%<(75,trunc)%s%Cblue\\ [%cn]' --decorate --numstat
       ls = log --pretty=format:'%C(auto)%<(8)%h %C(auto)%<(12)%cd %C(bold blue)%<(16,trunc)%cn %C(reset)%<(50,trunc)%s %C(dim white)%d' --date=short
       s = !git branch && git status
