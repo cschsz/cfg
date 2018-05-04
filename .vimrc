@@ -83,8 +83,8 @@ set number
 " Quickly time out on keycodes, but never time out on mappings.
 set notimeout ttimeout ttimeoutlen=200
 
-" Use <F11> to toggle between 'paste' and 'nopaste'.
-set pastetoggle=<F11>
+" Use <F9> to toggle between 'paste' and 'nopaste'.
+set pastetoggle=<F9>
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
