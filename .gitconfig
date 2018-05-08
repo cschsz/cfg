@@ -11,6 +11,6 @@
       cp = cherry-pick -e
       ll = log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%<(75,trunc)%s%Cblue\\ [%cn]' --decorate --numstat
       ls = log --pretty=format:'%C(auto)%<(8)%h %C(auto)%<(12)%cd %C(bold blue)%<(16,trunc)%cn %C(reset)%<(50,trunc)%s %C(dim white)%d' --date=short
-      s = !git branch && git status
+      s = !git branch && git log --pretty=format:'%C(auto)%<(8)%h %C(dim white)%<(12)%cd %C(bold blue)%<(16,trunc)%cn %C(reset)%C(dim white)%<(50,trunc)%s' --date=short --max-count=1 && git status
       tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %<(50,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
