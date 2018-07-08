@@ -1,16 +1,25 @@
 [user]
-      email = c@sch-sz.de
+      email = dev@sch-sz.de
       name = cschsz
 [core]
       editor = vim
 [alias]
+      h = "!echo s   = branch + log + last commit\
+         && echo br  = branch\
+         && echo cp  = cherry-pick -e\
+         && echo go  = checkout\
+         && echo ls  = log\
+         && echo acp = add + commit amend + push force\
+         && echo frh = fetch + reset hard"
+      acp = !git add . && git commit --amend --no-edit && git push origin --force
       br = branch
-      cm = commit -m
-      cob = checkout -b
-      go = checkout
       cp = cherry-pick -e
-      ll = log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%<(75,trunc)%s%Cblue\\ [%cn]' --decorate --numstat
+      frh = "!f(){ xremote=$(git remote) && xbranch=$(git rev-parse --abbrev-ref HEAD) && echo $xremote/$xbranch && git fetch --all && git reset --hard $xremote/$xbranch; };f"
+      go = checkout
       ls = log --pretty=format:'%C(auto)%<(8)%h %C(auto)%<(12)%cd %C(bold blue)%<(16,trunc)%cn %C(reset)%<(50,trunc)%s %C(dim white)%d' --date=short
       s = !git branch && git log --pretty=format:'%C(auto)%<(8)%h %C(dim white)%<(12)%cd %C(bold blue)%<(16,trunc)%cn %C(reset)%C(dim white)%<(50,trunc)%s' --date=short --max-count=1 && git status
+      # for future use
+      cm = commit -m
+      cob = checkout -b
+      ll = log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%<(75,trunc)%s%Cblue\\ [%cn]' --decorate --numstat
       tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %<(50,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-      acp = !git add . && git commit --amend --no-edit && git push origin --force
